@@ -16,3 +16,22 @@ string[] GetArray(string[] firstArray)
     Array.Resize(ref newArray, realSize);
     return newArray;
 }
+void PrintArray(string[] array)
+{
+    foreach (var item in array)
+    {
+        Console.Write($"{item} ");
+    }
+}
+
+string[] firstArray = { "1234", "1567", "-2", "computer science"};
+
+string[] newArray = GetArray(firstArray);
+
+Console.WriteLine("Заданный массив:");
+PrintArray(firstArray);
+
+Console.WriteLine();
+
+Console.WriteLine("Новый массив:");
+PrintArray(newArray);
